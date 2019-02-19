@@ -1,5 +1,5 @@
 requirements-on-mac:	 	## Install requirements on MacOs using Docker
-	@docker run -it --rm --name python36_certbot -v "${PYTHON_CODE_FOLDER}:/python_code" python:3.6.8 pip install -r /python_code/requirements.txt -t /python_code/
+	@docker run -it --rm --name python36_certbot -v "${PWD}/python_code:/python_code" python:3.6.8 pip install -r /python_code/requirements.txt -t /python_code/
 
 requirements: 			## Install requirements on Linux
 	@pip3 install virtualenv \
