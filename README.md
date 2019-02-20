@@ -26,10 +26,11 @@ Validation is performed with dns-01 check, so permissions to create/update R53 r
 
 
 ## Building
+For Linux we need at least Python3.6, pip and make
+For MacOs we are gonna build libs for Linux platform, so will use Docker image with Python3.6 and GCC onboard
 
 Lambda function has only one dependency yet - certbot-dns-route53>=0.29.1.
-To build it we have to call `make` from command line within a module folder.
-_Note for MacOs users: we are gonna build libs for Linux platform, so will use Docker image with Python3.6 and GCC onboard_
+To build it we have to call `make requirements` from command line within a module folder.
 This will put all the necessary libraries to `python_code` folder, which later be picked up by TF module and provided to Lambda
 
 
